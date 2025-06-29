@@ -24,7 +24,7 @@ export default function MetalColor() {
                             active === item.name ? "border-blue-600" : "border-transparent"
                         }`}
                     >
-                        <div className="w-full h-full rounded-full">
+                        <div className="w-full h-full rounded-full border-white border-4">
                             <Image className="rounded-full" src={item.src} alt={item.name} width={48} height={48} />
                         </div>
                     </div>

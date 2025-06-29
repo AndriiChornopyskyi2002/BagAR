@@ -19,15 +19,16 @@ export default function Material() {
                     onClick={() => setActive(item.name)}
                 >
                     <div
-                        className={`rounded-full border-2 px-3 p-2 ${
+                        className={`rounded-full border-2 px-4 p-2 ${
                             active === item.name ? "border-blue-600" : "border-black"
                         }`}
                     >
-                        <div className="text-sm font-medium">
+                        <div className={`text-sm font-medium ${
+                            active === item.name ? "text-blue-600" : "text-black"
+                        }`}>
                             {item.name}
                         </div>
                     </div>
-
                 </div>
             ))}
         </div>

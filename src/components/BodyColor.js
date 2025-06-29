@@ -24,7 +24,7 @@ export default function BodyColor() {
                         }`}
                     >
                         <div
-                            className="w-full h-full rounded-full"
+                            className="w-full h-full rounded-full border-white border-4"
                             style={{backgroundColor: item.color}}
                         ></div>
                     </div>
