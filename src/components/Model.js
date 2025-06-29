@@ -60,5 +60,5 @@ export default function Model() {
         });
     }, [activeColor, activeMetal, activeMaterial, leatherMap, fabricMap, denimMap, scene]);
 
-    return <primitive object={scene} />;
+    return <primitive object={scene} position={[0, -0.2, 0]} />;
 }

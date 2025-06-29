@@ -14,7 +14,7 @@ export default function Main() {
         <main>
             <div className="container mx-auto p-6 flex flex-col items-center justify-center">
                <ButtonModal setModal={setModal} />
-                <div style={{height: '600px'}} className="flex items-center justify-center mt-20">
+                <div className="flex items-center justify-center">
                     <AnimatePresence mode="wait">
                         {!modal ? (
                             <motion.div
