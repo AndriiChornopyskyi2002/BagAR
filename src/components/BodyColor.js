@@ -11,7 +11,7 @@ export default function BodyColor() {
     const setActive = useBodyColorStore((state) => state.setActiveColor);
 
     return (
-        <div className="flex space-x-4 mt-2">
+        <div className="flex space-x-4 mt-4">
             {colors.map((item) => (
                 <div
                     key={item.name}
@@ -19,7 +19,7 @@ export default function BodyColor() {
                     onClick={() => setActive(item.name)}
                 >
                     <div
-                        className={`rounded-full w-12 h-12 border-2 ${
+                        className={`rounded-full w-12 h-12 border-2 relative ${
                             active === item.name ? "border-blue-600" : "border-transparent"
                         }`}
                     >

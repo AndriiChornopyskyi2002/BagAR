@@ -12,7 +12,7 @@ export default function MetalColor() {
     const setActive = useMetalColor((state) => state.setActiveMetal);
 
     return (
-        <div className="flex space-x-4 mt-2">
+        <div className="flex space-x-4 mt-4">
             {metals.map((item) => (
                 <div
                     key={item.name}

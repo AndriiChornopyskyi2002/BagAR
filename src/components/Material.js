@@ -11,7 +11,7 @@ export default function Material() {
     const setActive = useMaterial((state) => state.setActiveMaterial);
 
     return (
-        <div className="flex space-x-2 mt-2">
+        <div className="flex space-x-2 mt-4">
             {materials.map((item) => (
                 <div
                     key={item.name}

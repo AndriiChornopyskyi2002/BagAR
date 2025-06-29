@@ -7,8 +7,8 @@ import Model from "@/components/Model";
 
 export default function ModelViewer() {
     return (
-        <Canvas style={{ height: 500, width: '100%' }} camera={{ position: [0, 0, 1], fov: 60 }}>
-            <ambientLight intensity={4} />
+        <Canvas style={{ height: 540 }} camera={{ position: [0, 0, 1], fov: 60 }}>
+            <ambientLight intensity={3} />
             <directionalLight position={[10, 10, 10]} intensity={1} />
 
             <Suspense fallback={null}>

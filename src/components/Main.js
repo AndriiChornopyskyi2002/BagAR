@@ -14,11 +14,11 @@ export default function Main() {
         <main>
             <div className="container mx-auto p-6 flex flex-col items-center justify-center">
                <ButtonModal setModal={setModal} />
-
-                <div style={{height: '500px'}} className="flex items-center justify-center pt-20 pb-10">
+                <div style={{height: '600px'}} className="flex items-center justify-center mt-20">
                     <AnimatePresence mode="wait">
                         {!modal ? (
                             <motion.div
+                                className=""
                                 key="viewer"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
