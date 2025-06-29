@@ -7,7 +7,7 @@ import Model from "@/components/Model";
 
 export default function ModelViewer() {
     return (
-        <Canvas className="flex justify-content-center" style={{ height: 500 }} camera={{ position: [0, 0, 1], fov: 60 }}>
+        <Canvas style={{ height: 500 }} camera={{ position: [0, 0, 1], fov: 60 }}>
             <ambientLight intensity={3} />
             <directionalLight position={[10, 10, 10]} intensity={1} />
 
@@ -15,7 +15,7 @@ export default function ModelViewer() {
                 <Model />
             </Suspense>
 
-            <OrbitControls minDistance={1} maxDistance={2} enableZoom={true} />
+            <OrbitControls minDistance={1} maxDistance={2} enablePan={false} enableZoom={true} />
         </Canvas>
     );
 }
