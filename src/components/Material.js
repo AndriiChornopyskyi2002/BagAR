@@ -1,0 +1,35 @@
+import {useState} from "react";
+import Image from "next/image";
+
+export default function Material() {
+    const materials = [
+        { name: "Leather" },
+        { name: "Fabric" },
+        { name: "Denim" },
+    ];
+
+    const [active, setActive] = useState("Leather");
+
+    return (
+        <div className="flex space-x-2 mt-2">
+            {materials.map((item) => (
+                <div
+                    key={item.name}
+                    className="flex flex-col items-center relative cursor-pointer"
+                    onClick={() => setActive(item.name)}
+                >
+                    <div
+                        className={`rounded-full border-2 px-3 p-2 ${
+                            active === item.name ? "border-blue-600" : "border-black"
+                        }`}
+                    >
+                        <div className="text-sm font-medium">
+                            {item.name}
+                        </div>
+                    </div>
+
+                </div>
+            ))}
+        </div>
+    );
+}
