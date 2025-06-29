@@ -1,5 +1,5 @@
-import {useState} from "react";
 import Image from "next/image";
+import {useMetalColor} from "@/stores/settingsBag";
 
 export default function MetalColor() {
     const metals = [
@@ -8,7 +8,8 @@ export default function MetalColor() {
         { name: "Black", src: "/black.png" },
     ];
 
-    const [active, setActive] = useState("Silver");
+    const active = useMetalColor((state) => state.activeMetal);
+    const setActive = useMetalColor((state) => state.setActiveMetal);
 
     return (
         <div className="flex space-x-4 mt-2">

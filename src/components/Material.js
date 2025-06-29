@@ -1,5 +1,4 @@
-import {useState} from "react";
-import Image from "next/image";
+import {useMaterial} from "@/stores/settingsBag";
 
 export default function Material() {
     const materials = [
@@ -8,7 +7,8 @@ export default function Material() {
         { name: "Denim" },
     ];
 
-    const [active, setActive] = useState("Leather");
+    const active = useMaterial((state) => state.activeMaterial);
+    const setActive = useMaterial((state) => state.setActiveMaterial);
 
     return (
         <div className="flex space-x-2 mt-2">

@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useBodyColorStore} from "@/stores/settingsBag";
 
 export default function BodyColor() {
     const colors = [
@@ -7,7 +7,8 @@ export default function BodyColor() {
         { name: "Blue", color: "#004899" },
     ];
 
-    const [active, setActive] = useState("Brown");
+    const active = useBodyColorStore((state) => state.activeColor);
+    const setActive = useBodyColorStore((state) => state.setActiveColor);
 
     return (
         <div className="flex space-x-4 mt-2">
